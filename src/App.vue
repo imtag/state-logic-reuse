@@ -21,6 +21,7 @@
 import { ref } from 'vue'
 import Mouse from '@/components/Mouse/index.vue'
 import MouseMixin from '@/components/Mixin/index.vue'
+import MouseScopedSlots from '@/components/ScopedSlots/index.vue'
 import MouseHoc from '@/components/Hoc/index.vue'
 import MouseRenderProps from '@/components/RenderProps/index.vue'
 import MouseHook from '@/components/Hook/index.vue'
@@ -28,6 +29,7 @@ import MouseHook from '@/components/Hook/index.vue'
 const buttons = Object.freeze([
   { name: '效果演示', component: 'Mouse' },
   { name: 'Mixin', component: 'MouseMixin' },
+  { name: 'Scoped Slots', component: 'MouseScopedSlots' },
   { name: 'Hoc', component: 'MouseHoc' },
   { name: 'Render Props', component: 'MouseRenderProps' },
   { name: 'Hook', component: 'MouseHook' }
@@ -39,6 +41,7 @@ export default {
   components: {
     Mouse,
     MouseMixin,
+    MouseScopedSlots,
     MouseHoc,
     MouseRenderProps,
     MouseHook
@@ -67,6 +70,7 @@ export default {
   }
 
   .app-header {
+    min-width: 1000px;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -75,7 +79,7 @@ export default {
   }
 
   .app-button-list {
-    width: 800px;
+    width: 900px;
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -85,7 +89,7 @@ export default {
   }
 
   .app-button-item {
-    width: 140px;
+    width: 130px;
     height: 40px;
     line-height: 40px;
     cursor: pointer;
